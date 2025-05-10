@@ -6,3 +6,4 @@ COPY . /usr/local/apache2/htdocs/
 
 # Expose port 80 (standard web port)
 EXPOSE 80
+
