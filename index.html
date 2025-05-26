@@ -1,73 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ctrl + Shift + Game - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ctrl + Shift + Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .license-box {
+        background-color: #1a1a1a;
+        color: #777;
+        margin: 30px auto;
+        padding: 20px 25px;
+        border-radius: 8px;
+        max-width: 100vw; /* smaller width */
+        font-size: 0.75rem;
+        font-weight: bold;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+        text-align: center; /* center the whole box text */
+        }
+
+.license-box h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #777;
+}
+
+.license-box pre {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #777;
+  text-align: center; /* center the <pre> block */
+}
+
+
+
+    /* Hero Banner */
+    .hero {
+    background: url('images/hero-banner.jpg') center/cover no-repeat;
+    height: 30vh; /* Smaller height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    }
+
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      z-index: 1;
+      font-size: 5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    }
+
+    .container {
+      padding: 20px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      color: #FFD700;
+    }
+
+    /* Game Cards */
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .game-card {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .game-card h3 {
+      font-size: 1.4rem;
+      margin: 15px 0 10px;
+      color: #FFD700;
+    }
+
+    .game-card p {
+      font-size: 0.9rem;
+      padding: 0 15px 20px;
+      color: #ccc;
+    }
+
+    .game-card a {
+      display: inline-block;
+      margin-bottom: 15px;
+      background-color: #FFD700;
+      color: #1e1e1e;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .game-card a:hover {
+      background-color: #e0b800;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a1a1a;
+      color: #999;
+      text-align: center;
+      padding: 20px 0 10px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    .license {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1><span class="ctrl-shift">Ctrl + Shift</span> + <span class="game-text">Game</span></h1>
-    </header>
 
-    <main class="container">
-        <section id="rdr2-section" class="game-overview">
-            <h2>Red Dead Redemption 2</h2>
-            <p>
-                Step into the dying Wild West as Arthur Morgan, a member of the infamous Van der Linde gang.
-                Amidst internal strife and the encroaching grip of civilization, Arthur must make
-                impossible choices that define his loyalty and honor in a world that no longer has a place for outlaws.
-            </p>
-            <a href="rdr2.html" class="button">View More</a>
-        </section>
+  <section class="hero">
+    <h1>Ctrl + Shift + Game</h1>
+  </section>
 
-        <section id="tlou2-section" class="game-overview">
-            <h2>The Last of Us Part II</h2>
-            <p>
-                Five years after their perilous journey across post-pandemic America, Ellie and Joel have settled
-                in Jackson, Wyoming. When a violent event shatters their peace, Ellie embarks on a relentless
-                quest for vengeance and justice, confronting the devastating moral complexities of her actions.
-            </p>
-            <a href="tlou2.html" class="button">View More</a>
-        </section>
+  <main class="container">
+    <h2>Explore Story-Driven Masterpieces</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/rdr2-banner.jpg" alt="Red Dead Redemption 2" />
+        <h3>Red Dead Redemption 2</h3>
+        <p>An epic tale of honor, loyalty, and the fading Wild West.</p>
+        <a href="rdr2.html">View Page</a>
+      </div>
 
-        <section id="uncharted4-section" class="game-overview">
-            <h2>Uncharted 4: A Thief's End</h2>
-            <p>
-                Several years after his last adventure, retired fortune hunter Nathan Drake is forced back into
-                the world of thieves when his presumed-dead brother, Sam, resurfaces. Together, they embark on
-                a globetrotting hunt for Captain Avery's long-lost pirate treasure, testing Drake's limits and what he's
-                willing to sacrifice.
-            </p>
-            <a href="uncharted4.html" class="button">View More</a>
-        </section>
-    </main>
+      <div class="game-card">
+        <img src="images/tlou2-banner.jpg" alt="The Last of Us Part II" />
+        <h3>The Last of Us Part II</h3>
+        <p>A brutal, emotional journey through revenge and redemption.</p>
+        <a href="tlou2.html">View Page</a>
+      </div>
 
-    <footer>
-        <p>&copy; 2023 Ctrl + Shift + Game - ICT171 Assignment 2</p>
-        <footer>
-            <div style="background-color: black; color: white; padding: 30px; font-family: monospace; font-size: 14px; text-align: center;">
-                <pre style="white-space: pre-wrap;">
-        Apache License 2.0
-        Copyright © 2025 Bhuvanesh Krishnan Vijayaraj
-        
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
-        
-        http://www.apache.org/licenses/LICENSE-2.0
-        
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
-                </pre>
-            </div>
-        </footer>
-        
-  
+      <div class="game-card">
+        <img src="images/uncharted4-banner.jpg" alt="Uncharted 4" />
+        <h3>Uncharted 4: A Thief's End</h3>
+        <p>A breathtaking treasure hunt across the globe with Nathan Drake.</p>
+        <a href="uncharted4.html">View Page</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Ctrl + Shift + Game | ICT171 Assignment 2  
+    <div class="license">
+      All game content, images, and logos are © their respective developers and publishers.  
+      Used for academic purposes only.
+    </div>
+  </footer>
+
 </body>
+<div class="license-box">
+    <h2>Licensing</h2>
+    <pre>
+  Copyright ©2025 Bhuvanesh Krishnan Vijayaraj
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at:
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+    </pre>
+  </div>
+  
 </html>

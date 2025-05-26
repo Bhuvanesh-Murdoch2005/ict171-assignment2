@@ -53,12 +53,16 @@
         }
 
         .tlou2-banner {
-            width: 100%;
-            max-height: 350px;
-            object-fit: cover; /* Cover the area, may crop */
-            display: block;
-            filter: grayscale(30%) sepia(10%); /* Subtle thematic filter */
-        }
+        width: 100vw; /* Full viewport width */
+        max-height: 350px;
+        object-fit: cover; /* Crop to fit container nicely */
+        object-position: center;
+        display: block;
+        filter: grayscale(30%) sepia(10%);
+        margin: 0 auto; /* Center it horizontally if inside a wrapper */
+    }
+
+
 
         /* Main Content Area */
         .main-content {
@@ -220,7 +224,8 @@
             </h1>
         </div>
         <!-- Placeholder for TLOU2 Banner/Logo -->
-        <img src="images/tlou2_logo.jpg" alt="The Last of Us Part II Banner" class="tlou2-banner">
+    <!-- Actual TLOU2 Banner -->
+    <img src="images/tlou2-banner.jpg" alt="The Last of Us Part II Banner" class="tlou2-banner">
     </header>
 
     <main class="main-content container">
