@@ -1,0 +1,157 @@
+/* General Body & Font Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* A light gray background for the whole site */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container to center content and limit width */
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: #0779e4 3px solid; /* A nice blue accent */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header h1 .ctrl-shift {
+    color: #0779e4; /* Blue for "Ctrl + Shift" */
+}
+
+header h1 .game-text {
+    color: #ffc107; /* Gold for "Game" */
+}
+
+
+/* Game Overview Sections on Homepage */
+.game-overview {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.game-overview h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.game-overview p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Themed Backgrounds for Game Overview Sections */
+#rdr2-section {
+    background-color: #8B4513; /* SaddleBrown - rustic/western */
+    color: #fff; /* Light text for dark background */
+}
+#rdr2-section h2 { color: #FFD700; } /* Gold title for RDR2 */
+
+
+#tlou2-section {
+    background-color: #2F4F4F; /* DarkSlateGray - dark/emotional */
+    color: #e0e0e0; /* Lighter text for dark background */
+}
+#tlou2-section h2 { color: #90EE90; } /* Light green title for TLOU2 */
+
+#uncharted4-section {
+    background-color: #DAA520; /* Goldenrod - adventurous */
+    color: #333; /* Dark text for lighter background */
+}
+#uncharted4-section h2 { color: #000080; } /* Navy title for Uncharted */
+
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    background: #0779e4; /* Consistent blue button */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Game Detail Page Specifics */
+.game-detail-page {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.game-detail-page h2 { /* Sub-header for game title on detail page */
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.game-detail-page .story-summary h3,
+.game-detail-page .characters h3 {
+    color: #0779e4; /* Blue for sub-section titles */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.game-detail-page .characters ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.game-detail-page .character-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.game-detail-page .character-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #ddd;
+}
+
+.back-button {
+    display: block; /* Make it take full width available or style as needed */
+    width: fit-content;
+    margin: 30px auto 10px auto; /* Center it */
+    background-color: #6c757d; /* A gray for back button */
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: #333;
+    color: #fff;
+}

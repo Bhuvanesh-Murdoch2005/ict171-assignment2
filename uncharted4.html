@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncharted 4: A Thief’s End – Ctrl + Shift + Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #FDF5E6; /* Soft Yellow/Parchment - Uncharted Theme */
+            color: #4A3B31; /* Dark Brown Text - Good contrast on parchment */
+            padding-bottom: 60px; /* Space for back button */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        /* Banner Placeholder */
+        .banner-placeholder {
+            background-color: #DAA520; /* Goldenrod - Rich gold for banner */
+            color: #FFFFFF; /* White text on gold banner */
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-bottom: 5px solid #B8860B; /* Darker gold accent */
+            text-shadow: 1px 1px 2px #000000a0;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background-color: rgba(255, 248, 220, 0.8); /* Cornsilk with slight transparency */
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border: 1px solid #D2B48C; /* Tan/Sandy border */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #002244; /* Deep Navy Blue for section titles */
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FFD700; /* Bright Gold underline */
+            text-align: center;
+        }
+
+        .content-section > p { /* Direct paragraph for story summary */
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #5C4033; /* Darker brown for readability */
+        }
+
+        /* Main Characters Section - Horizontal Cards */
+        .character-grid {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens if needed */
+            gap: 25px; /* Space between character cards */
+            justify-content: center; /* Center cards if they don't fill the row */
+        }
+
+        .character-card {
+            background-color: #FFFACD; /* LemonChiffon - Lighter parchment for cards */
+            border: 2px solid #B8860B; /* DarkGoldenrod Border */
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Default for mobile (stacked) */
+            max-width: 320px; /* Max width for cards */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .character-image-placeholder {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%; /* Circular images */
+            background-color: #A0522D; /* Sienna - old map/leather feel */
+            color: #FFF8DC; /* Cornsilk text on placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            border: 3px solid #FFD700; /* Gold border for image */
+            line-height: 1.2; /* For multi-line text inside */
+        }
+
+        .character-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8B4513; /* SaddleBrown - Rich brown for character names */
+            margin-bottom: 8px;
+        }
+
+        .character-card p {
+            font-size: 0.9rem;
+            color: #604E40; /* Slightly lighter brown for description */
+            line-height: 1.5;
+        }
+
+        /* Back to Home Button */
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #003366; /* Darker Navy for button */
+            color: #FFD700; /* Gold text */
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: 2px solid #FFD700; /* Gold border on button */
+        }
+
+        .back-button:hover {
+            background-color: #002244; /* Slightly lighter Navy on hover */
+            color: #FFF;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) { /* Tablets and up */
+            .character-card {
+                /* For 3 cards, 100% / 3 = 33.33%. Subtract gap.
+                   (100% - (2 * 25px)) / 3
+                   Let flexbox handle it with flex-basis or max-width. Max-width is simpler here.
+                */
+            }
+             .banner-placeholder {
+                font-size: 2rem;
+            }
+             .content-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width: 1024px) { /* Desktops - ensure 3 cards per row */
+            .character-grid {
+                justify-content: space-around; /* Better spacing for 3 cards */
+            }
+        }
+
+        @media (max-width: 767px) { /* Mobile and smaller tablets */
+            .character-grid {
+                flex-direction: column; /* Stack cards */
+                align-items: center; /* Center stacked cards */
+            }
+            .character-card {
+                max-width: 350px; /* Allow slightly wider cards when stacked */
+                width: 90%; /* Responsive width when stacked */
+            }
+             .banner-placeholder {
+                font-size: 1.6rem;
+                padding: 40px 15px;
+            }
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+            .character-image-placeholder {
+                width: 120px;
+                height: 120px;
+            }
+            .character-card h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="banner-placeholder">
+        Uncharted 4 Banner
+    </div>
+
+    <main class="container">
+        <section class="content-section story-summary">
+            <h2>Story Summary</h2>
+            <p>
+                Several years after his last adventure, retired fortune hunter Nathan Drake is forced back into the world of thieves when his presumed-dead brother, Sam, resurfaces. Together, they embark on a globetrotting hunt for Captain Avery’s long-lost pirate treasure, testing Drake’s limits and what he's willing to sacrifice.
+            </p>
+        </section>
+
+        <section class="content-section main-characters">
+            <h2>Main Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="character-image-placeholder">Nathan Drake Image</div>
+                    <h3>Nathan Drake</h3>
+                    <p>The charismatic and resilient treasure hunter, now contemplating retirement.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image-placeholder">Samuel Drake Image</div>
+                    <h3>Samuel “Sam” Drake</h3>
+                    <p>Nathan’s older brother, whose reappearance kickstarts the adventure.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image-placeholder">Elena Fisher Image</div>
+                    <h3>Elena Fisher</h3>
+                    <p>Nathan’s wife, an investigative journalist who often gets pulled into his escapades.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-button-container">
+            <a href="index.html" class="button back-button">Back to Home</a>
+            <!-- Assuming index.html is your homepage -->
+        </div>
+    </main>
+
+</body>
+</html>

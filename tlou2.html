@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last of Us Part II - Ctrl + Shift + Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #3D403A; /* Dark, slightly desaturated olive/gray - TLOU2 Main Background */
+            color: #C5C6C7; /* Light gray - TLOU2 Main Text Color */
+            padding-bottom: 60px; /* Space for footer */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden; /* Clear floats if any */
+            padding: 0 15px;
+        }
+
+        /* Header Styling */
+        .site-header {
+            background-color: #2A2C27; /* Darker than body for Header */
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 4px solid #556B2F; /* Dark Olive Green Accent */
+        }
+
+        .site-header .site-title {
+            font-size: 2.5rem;
+            color: #A9B1A2; /* Lighter muted green/gray for Title */
+            text-shadow: 1px 1px 2px #111;
+            margin-bottom: 10px;
+        }
+
+        .site-header .site-title .ctrl-shift {
+            color: #7E8C69; /* Muted desaturated green for "Ctrl + Shift" */
+        }
+
+        .site-header .site-title .game-text {
+            color: #90A080; /* Slightly different muted green for "Game" */
+        }
+
+        .tlou2-banner {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover; /* Cover the area, may crop */
+            display: block;
+            filter: grayscale(30%) sepia(10%); /* Subtle thematic filter */
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 25px 0;
+        }
+
+        .content-section {
+            background-color: rgba(30, 32, 28, 0.6); /* Semi-transparent darker overlay for sections */
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid #556B2F; /* Dark Olive Green border for sections */
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #8FBC8F; /* DarkSeaGreen for section titles */
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #556B2F; /* Dark Olive Green underline */
+            text-align: center;
+        }
+
+        .content-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #C5C6C7; /* Main text color */
+        }
+
+        /* Characters Section Styling */
+        .character-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px; /* Space between character cards */
+            justify-content: center;
+        }
+
+        .character-card {
+            background-color: #333630; /* Darker muted green/gray for Cards */
+            border: 2px solid #556B2F; /* Dark Olive Green Border */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Default for mobile */
+            max-width: 320px; /* Max width for cards */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .character-card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; /* Circular images */
+            object-fit: cover; /* Ensures image covers, might crop */
+            border: 4px solid #7E8C69; /* Muted desaturated green border */
+            margin-bottom: 15px;
+            filter: grayscale(20%); /* Subtle desaturation for character images */
+        }
+
+        .character-card h3 {
+            font-size: 1.6rem;
+            color: #8FBC8F; /* DarkSeaGreen for character names */
+            margin-bottom: 10px;
+        }
+
+        .character-card .character-description {
+            font-size: 0.95rem;
+            color: #B0B0B0; /* Slightly lighter gray for differentiation */
+        }
+
+        /* Footer Styling */
+        .site-footer {
+            background-color: #2A2C27; /* Darker than body, like Header */
+            color: #A9B1A2; /* Lighter muted green/gray Text */
+            text-align: center;
+            padding: 20px 0;
+            border-top: 4px solid #556B2F; /* Dark Olive Green Accent */
+            position: relative;
+            width: 100%;
+            margin-top: 30px; /* Ensure space above footer */
+        }
+
+        .site-footer .back-button {
+            display: inline-block;
+            background-color: #6A7859; /* Muted green for button */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .site-footer .back-button:hover {
+            background-color: #556B2F; /* Darker Olive Green on hover */
+            transform: translateY(-2px);
+        }
+
+        .site-footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) { /* Tablets and up */
+            .character-card {
+                width: calc(50% - 12.5px); /* Two cards per row, accounting for gap */
+            }
+            .site-header .site-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (min-width: 1024px) { /* Desktops and up */
+            .character-card {
+                width: calc(33.333% - 17px); /* Three cards per row, accounting for gap */
+            }
+             .content-section h2 {
+                font-size: 2.2rem;
+            }
+            .content-section p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) { /* Smaller mobile screens */
+            .site-header .site-title {
+                font-size: 2rem;
+            }
+            .content-section h2 {
+                font-size: 1.7rem;
+            }
+            .character-card img {
+                width: 120px;
+                height: 120px;
+            }
+            .character-card h3 {
+                font-size: 1.4rem;
+            }
+            .tlou2-banner {
+                max-height: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">
+                <span class="ctrl-shift">Ctrl + Shift</span> + <span class="game-text">Game</span>
+            </h1>
+        </div>
+        <!-- Placeholder for TLOU2 Banner/Logo -->
+        <img src="images/tlou2_logo.jpg" alt="The Last of Us Part II Banner" class="tlou2-banner">
+    </header>
+
+    <main class="main-content container">
+        <section id="story-summary" class="content-section">
+            <h2>Story Summary</h2>
+            <p>
+                Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have found
+                a semblance of peace in Jackson, Wyoming. However, when a violent event disrupts that peace, Ellie embarks
+                on a relentless quest for vengeance and justice. Her pursuit takes her through a hostile world, forcing her
+                to confront the devastating physical and emotional consequences of her actions. The Last of Us Part II is a
+                harrowing exploration of the cycles of violence, the complexities of trauma, and the blurred lines between
+                hero and villain in a world where survival often demands brutal choices.
+            </p>
+        </section>
+
+        <section id="main-characters" class="content-section">
+            <h2>Main Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <img src="images/ellie.jpg" alt="Ellie">
+                    <h3>Ellie</h3>
+                    <p class="character-description">
+                        Ellie is the main protagonist, hardened by loss and driven by an all-consuming need for vengeance
+                        after a traumatic event shatters her life in Jackson.
+                    </p>
+                </div>
+                <div class="character-card">
+                    <img src="images/abby.jpg" alt="Abby Anderson">
+                    <h3>Abby Anderson</h3>
+                    <p class="character-description">
+                        Abby’s story intertwines with Ellie’s, offering a contrasting perspective. She is a strong and
+                        conflicted soldier on her own quest for retribution, challenging players' perceptions of empathy.
+                    </p>
+                </div>
+                <div class="character-card">
+                    <img src="images/joel.jpg" alt="Joel Miller">
+                    <h3>Joel Miller</h3>
+                    <p class="character-description">
+                        Joel is Ellie’s protective father figure. His past actions and complex choices at the end of the first
+                        game cast a long shadow, deeply influencing the events and motivations in Part II.
+                    </p>
+                </div>
+                <!-- You can add more character cards here following the same structure -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <a href="index.html" class="back-button">Back to Home</a>
+            <p>© 2023 Ctrl + Shift + Game - ICT171 Assignment 2</p>
+        </div>
+    </footer>
+
+</body>
+</html>

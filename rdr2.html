@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dead Redemption 2 - Ctrl + Shift + Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #6F4E37; /* Deep Brown - RDR2 Main Background */
+            color: #F5E8C7; /* Creamy Off-White - RDR2 Main Text Color */
+            padding-bottom: 60px; /* Space for footer */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden; /* Clear floats if any */
+            padding: 0 15px;
+        }
+
+        /* Header Styling */
+        .site-header {
+            background-color: #4A3B31; /* Darker Brown for Header */
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 4px solid #A0522D; /* Sienna Accent */
+        }
+
+        .site-header .site-title {
+            font-size: 2.5rem;
+            color: #DEB887; /* BurlyWood/Rustic Gold for Title */
+            text-shadow: 1px 1px 2px #000;
+            margin-bottom: 10px;
+        }
+
+        .site-header .site-title .ctrl-shift {
+            color: #FFD700; /* Gold for "Ctrl + Shift" */
+        }
+
+        .site-header .site-title .game-text {
+            color: #CD853F; /* Peru - a reddish brown for "Game" */
+        }
+
+        .rdr2-banner {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover; /* Cover the area, may crop */
+            display: block;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 25px 0;
+        }
+
+        .content-section {
+            background-color: rgba(48, 33, 22, 0.6); /* Semi-transparent darker overlay for sections */
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid #A0522D; /* Sienna border for sections */
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #FFD700; /* Gold for section titles */
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #A0522D; /* Sienna underline */
+            text-align: center;
+        }
+
+        .content-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #F5E8C7; /* Main text color */
+        }
+
+        /* Characters Section Styling */
+        .character-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px; /* Space between character cards */
+            justify-content: center;
+        }
+
+        .character-card {
+            background-color: #5C3D2E; /* Darker Wood Tone for Cards */
+            border: 2px solid #A0522D; /* Sienna Border */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 100%; /* Default for mobile */
+            max-width: 320px; /* Max width for cards */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .character-card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; /* Circular images */
+            object-fit: cover; /* Ensures image covers, might crop */
+            border: 4px solid #DEB887; /* BurlyWood border */
+            margin-bottom: 15px;
+        }
+
+        .character-card h3 {
+            font-size: 1.6rem;
+            color: #FFD700; /* Gold for character names */
+            margin-bottom: 10px;
+        }
+
+        .character-card .character-description {
+            font-size: 0.95rem;
+            color: #E0D0B0; /* Slightly lighter than main text for differentiation */
+        }
+
+        /* Footer Styling */
+        .site-footer {
+            background-color: #4A3B31; /* Darker Brown like Header */
+            color: #DEB887; /* BurlyWood/Rustic Gold Text */
+            text-align: center;
+            padding: 20px 0;
+            border-top: 4px solid #A0522D; /* Sienna Accent */
+            position: relative; /* Changed from fixed for natural flow */
+            width: 100%;
+            margin-top: 30px; /* Ensure space above footer */
+        }
+
+        .site-footer .back-button {
+            display: inline-block;
+            background-color: #A0522D; /* Sienna for button */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .site-footer .back-button:hover {
+            background-color: #804122; /* Darker Sienna on hover */
+            transform: translateY(-2px);
+        }
+
+        .site-footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) { /* Tablets and up */
+            .character-card {
+                width: calc(50% - 12.5px); /* Two cards per row, accounting for gap */
+            }
+            .site-header .site-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (min-width: 1024px) { /* Desktops and up */
+            .character-card {
+                width: calc(33.333% - 17px); /* Three cards per row, accounting for gap */
+            }
+             .content-section h2 {
+                font-size: 2.2rem;
+            }
+            .content-section p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) { /* Smaller mobile screens */
+            .site-header .site-title {
+                font-size: 2rem;
+            }
+            .content-section h2 {
+                font-size: 1.7rem;
+            }
+            .character-card img {
+                width: 120px;
+                height: 120px;
+            }
+            .character-card h3 {
+                font-size: 1.4rem;
+            }
+             .rdr2-banner {
+                max-height: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">
+                <span class="ctrl-shift">Ctrl + Shift</span> + <span class="game-text">Game</span>
+            </h1>
+        </div>
+        <!-- Placeholder for RDR2 Banner/Logo -->
+        <img src="images/rdr2_logo.jpg" alt="Red Dead Redemption 2 Banner" class="rdr2-banner">
+    </header>
+
+    <main class="main-content container">
+        <section id="story-summary" class="content-section">
+            <h2>Story Summary</h2>
+            <p>
+                America, 1899. The era of the Wild West is drawing to a close as lawmen hunt down the last remaining outlaw gangs.
+                Those who will not surrender or succumb are killed. After a robbery goes badly wrong in the western town of Blackwater,
+                Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the
+                nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America
+                in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice
+                between his own ideals and loyalty to the gang who raised him. Red Dead Redemption 2 is an epic tale of life in
+                America at the dawn of the modern age.
+            </p>
+        </section>
+
+        <section id="main-characters" class="content-section">
+            <h2>Main Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <img src="images/arthur.jpg" alt="Arthur Morgan">
+                    <h3>Arthur Morgan</h3>
+                    <p class="character-description">
+                        Arthur is the game’s main protagonist, a loyal yet conflicted senior enforcer of the Van der Linde gang.
+                        He is Dutch's most dependable and capable gunman, struggling with the changing world and his own morality.
+                    </p>
+                </div>
+                <div class="character-card">
+                    <img src="images/dutch.jpg" alt="Dutch van der Linde">
+                    <h3>Dutch van der Linde</h3>
+                    <p class="character-description">
+                        Dutch is the charismatic, idealistic, and increasingly unhinged leader of the Van der Linde gang.
+                        He views himself as a visionary, but his plans and sanity begin to crumble under pressure.
+                    </p>
+                </div>
+                <div class="character-card">
+                    <img src="images/john.jpg" alt="John Marston">
+                    <h3>John Marston</h3>
+                    <p class="character-description">
+                        John is another key member of the gang and the protagonist of the original Red Dead Redemption.
+                        He's a capable outlaw who eventually seeks to leave the life behind for his family.
+                    </p>
+                </div>
+                <!-- You can add more character cards here following the same structure -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <a href="index.html" class="back-button">Back to Home</a>
+            <p>© 2023 Ctrl + Shift + Game - ICT171 Assignment 2</p>
+        </div>
+    </footer>
+
+</body>
+</html>
