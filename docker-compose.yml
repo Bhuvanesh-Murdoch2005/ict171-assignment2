@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ctrlshiftgame:
+    build: .
+    container_name: ctrl-shift-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/local/apache2/htdocs/
+    restart: unless-stopped
