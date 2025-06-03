@@ -30,3 +30,45 @@ The website is served inside a Docker container using Apache HTTP Server. HTTPS 
 
 ## 🔧 Folder & File Structure  
 
+---
+
+## ✅ Key Functionalities  
+- Fully functional HTML/CSS site served from Apache inside a Docker container.  
+- HTTPS padlock enabled and verified using Certbot.  
+- Docker container auto-restarts using `restart: unless-stopped`.  
+- Code version controlled via GitHub with branching and commit history.  
+
+---
+
+## 🎥 Video Explainer  
+_A video walkthrough will be added shortly demonstrating the server, website, SSL, and GitHub setup._
+
+---
+
+## 📦 Deployment Notes  
+To deploy locally or on an EC2 instance:
+```bash
+git clone https://github.com/Bhuvanesh-Murdoch2005/ict171-assignment2.git
+cd ict171-assignment2
+docker-compose up -d
+
+
+
+---
+
+## ✅ Final Checklist for GitHub Submission
+
+| Task | Status |
+|------|--------|
+| All code and files pushed | ✅ |
+| Dockerfile + Compose included | ✅ |
+| `README.md` complete | ⏳ To do (Use above) |
+| Student name + ID clearly listed | ✅ Included in README |
+| Domain + IP mentioned | ✅ Add to README |
+| License/disclaimer present | ✅ Add to README |
+| Video explainer mention (even if not yet uploaded) | ✅ Add placeholder section |
+
+---
+
+Let me know once it’s updated — I’ll review it immediately if you want a quick check before final submission.
+
