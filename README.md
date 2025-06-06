@@ -91,7 +91,7 @@ GitHub commit history
 
 ## Full Documentation (PDF)
 
-[Click here to view the full step-by-step assignment documentation (PDF)](https://github.com/Bhuvanesh-Murdoch2005/ict171-assignment2/raw/main/docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignment2_Documentation.pdf)
+https://github.com/Bhuvanesh-Murdoch2005/ict171-assignment2/raw/main/docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignment2_Documentation.pdf
 
 ## References
 
