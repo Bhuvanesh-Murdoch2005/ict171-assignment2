@@ -89,9 +89,11 @@ Apache + Certbot config
 GitHub commit history
 (To be uploaded by June 9, 2025)
 
-## Full Documentation (PDF)
+## Video Explainer
 
-https://github.com/Bhuvanesh-Murdoch2005/ict171-assignment2/raw/main/docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignment2_Documentation.pdf
+Watch my full walkthrough for ICT171 Assignment 2 here:  
+👉 [https://www.youtube.com/watch?v=p0Qr4eWq31Q](https://www.youtube.com/watch?v=p0Qr4eWq31Q)
+
 
 ## References
 
