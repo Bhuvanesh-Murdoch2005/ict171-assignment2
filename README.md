@@ -1,103 +1,110 @@
-# Ctrl + Shift + Game 🎮  
-**ICT171 Assignment 2 – Cloud Server Project (2025)**  
+# 🎮 Ctrl + Shift + Game – Cloud Server Project
+
+**Live Website:** [https://bhuvi.xyz](https://bhuvi.xyz)  
 **Student Name:** Bhuvanesh Krishnan Vijayaraj  
 **Student ID:** 34580045  
-**Domain:** https://bhuvi.xyz  
-**Public IP:** 54.66.59.90  
+**Repository:** [GitHub Repo](https://github.com/Bhuvanesh-Murdoch2005/ict171-assignment2)  
+**Public IP:** 54.66.59.90
 
 ---
 
-## 📄 Project Description  
-Ctrl + Shift + Game is a themed static blog website hosted on an AWS EC2 instance (Ubuntu 24.04), served inside a Docker container running Apache HTTP Server. The project includes three story-driven game pages and demonstrates infrastructure setup, scripting, security, and containerization.
+## Project Description
+
+A static gaming blog hosted on an AWS EC2 Ubuntu instance (24.04), running inside a Docker container using Apache2. HTTPS is enabled via Certbot, and the site includes three themed pages for RDR2, The Last of Us Part II, and Uncharted 4. This repo documents setup, security, deployment, and version control.
 
 ---
 
-## 🛠️ Technologies Used  
-- **AWS EC2** (Ubuntu 24.04 LTS)  
-- **Apache2 (httpd:2.4 Docker image)**  
-- **Docker & Docker Compose**  
-- **Certbot + Let’s Encrypt (SSL/TLS)**  
-- **GitHub (version control)**  
-- **GoDaddy (custom domain configuration)**  
+## Technologies Used
+
+- AWS EC2 (Ubuntu 24.04)
+- Apache2 (via httpd:2.4 Docker Image)
+- Docker & Docker Compose
+- Certbot + Let’s Encrypt (SSL/TLS)
+- GitHub (branches + version control)
+- GoDaddy (for DNS)
 
 ---
 
-## 📁 Folder & File Structure  
+## Folder & File Structure
 
 ```
-.
 ├── Dockerfile
 ├── docker-compose.yml
-├── setup.sh
 ├── index.html
 ├── rdr2.html
 ├── tlou2.html
 ├── uncharted4.html
+├── setup.sh
 ├── style.css
+├── README.md
 └── images/
 ```
 
----
+## Deployment Instructions
 
-## ✅ Key Features  
-- Dockerized web server using Apache with persistent container restart policy.  
-- Secured HTTPS using Let’s Encrypt SSL certificate via Certbot.  
-- Live website linked to GoDaddy-registered domain [bhuvi.xyz](https://bhuvi.xyz).  
-- Version-controlled repository with commit history and feature branches.  
-- Multi-page layout with themed content and character profiles.  
-
----
-
-## 🚀 Deployment Instructions  
-
-To deploy this server locally or on a new EC2 instance:  
-```bash
+### Initial Setup:
+```
 git clone https://github.com/Bhuvanesh-Murdoch2005/ict171-assignment2.git
 cd ict171-assignment2
 docker-compose up -d
-```
 
-For rebuilds:  
-```bash
 docker-compose down --volumes --remove-orphans
 docker-compose build --no-cache
 docker-compose up -d
 ```
+## Rebuild & Restart:
+```
+docker-compose down --volumes --remove-orphans
+docker-compose build --no-cache
+docker-compose up -d
+```
+## DNS & SSL/TLS Setup
 
----
+Domain: bhuvi.xyz (purchased via GoDaddy)
+Pointed to EC2 public IP using A Record
+Certbot used to install free SSL via Let's Encrypt
+Padlock visible confirming HTTPS functionality
 
-## 🎥 Video Explainer  
-_A video walkthrough demonstrating the deployment, domain linking, Docker container, GitHub setup, and live testing will be uploaded shortly._  
+## Docker Persistence
 
----
+Docker container uses restart: unless-stopped to auto-restart after reboot or crash. Verified via:
+```
+docker ps
+```
+## Testing & Verification
 
-## 🧲 Testing & Verification  
-- ✅ Website is live at: [https://bhuvi.xyz](https://bhuvi.xyz)  
-- ✅ HTTPS secured with valid SSL certificate  
-- ✅ Docker container auto-restarts with `restart: unless-stopped`  
-- ✅ Page routing confirmed across all devices and browsers  
-- ✅ Website verified using public DNS propagation tools and browser inspection  
+- HTTPS padlock visible
+- Auto-restart on reboot tested
+- All pages accessible: /rdr2.html, /tlou2.html, /uncharted4.html
+- Cross-browser & mobile tested
+- DNS resolves globally via public tools
 
----
+## Video Explainer
 
-## 📚 References  
-- [Apache HTTP Server Docs](https://httpd.apache.org/)  
-- [Docker Documentation](https://docs.docker.com/)  
-- [Certbot SSL Setup](https://certbot.eff.org/)  
-- [AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/)  
-- [GoDaddy DNS Support](https://au.godaddy.com/help/edit-dns-zone-files-4080)  
-- [GitHub Student Pack](https://education.github.com/pack)
+A walkthrough recording showing:
 
----
+Domain loading and navigation
+Docker container running
+Apache + Certbot config
+GitHub commit history
+(To be uploaded by June 9, 2025)
 
-## 🔒 Licensing & Fair Use Notice  
-This project was developed for educational purposes only as part of Murdoch University's ICT171 assignment.  
+## References
+
+Apache HTTP Server Docs
+Docker Compose Docs
+Certbot SSL Setup
+AWS EC2 Documentation
+GoDaddy DNS Help
+GitHub Docs
+
+## License & Fair Use Notice
+
+This project was developed for educational purposes only as part of Murdoch University’s ICT171 assignment.
 All logos, character images, and references to:
-- **Red Dead Redemption 2** (© Rockstar Games)  
-- **The Last of Us Part II** (© Naughty Dog)  
-- **Uncharted 4: A Thief’s End** (© Sony Interactive Entertainment)  
 
-are the intellectual property of their respective owners and used strictly under **fair academic use**.  
-The server is not monetized or publicly promoted for commercial gain.
+- Red Dead Redemption 2 (© Rockstar Games)
+- The Last of Us Part II (© Naughty Dog)
+- Uncharted 4: A Thief’s End (© Sony Interactive Entertainment)
+are used under fair use principles for commentary, education, and demonstration.
 
----
