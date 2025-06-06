@@ -89,6 +89,10 @@ Apache + Certbot config
 GitHub commit history
 (To be uploaded by June 9, 2025)
 
+## Full Documentation (PDF)
+
+[Click here to view the full step-by-step assignment documentation (PDF)](docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignemnt2_Docuemntation.pdf)
+
 ## References
 
 Apache HTTP Server Docs
