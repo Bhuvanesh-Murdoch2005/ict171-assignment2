@@ -79,30 +79,52 @@ docker ps
 - Cross-browser & mobile tested
 - DNS resolves globally via public tools
 
+## Extended PDF Documentation
+
+
+[Download Full PDF Documentation](docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignment2_Documentation.pdf)  
+
+This PDF includes detailed setup steps with screenshots for:
+- EC2 server configuration
+- Apache and Docker deployment
+- GoDaddy domain linking
+- SSL setup with Certbot
+- GitHub version control
+- Troubleshooting and testing
+
+
+
 ## Video Explainer
 
-A walkthrough recording showing:
+This video walkthrough demonstrates the entire setup and deployment process of the cloud server project. It covers:
 
-Domain loading and navigation
-Docker container running
-Apache + Certbot config
-GitHub commit history
-(To be uploaded by June 9, 2025)
+- EC2 instance and SSH
+- Docker + Apache configuration
+- Website demonstration
+- GoDaddy DNS setup
+- Certbot SSL configuration
+- GitHub version control usage
+- Reflections and learning outcomes
 
-## Video Explainer
 
-Watch my full walkthrough for ICT171 Assignment 2 here:  
-👉 [https://www.youtube.com/watch?v=p0Qr4eWq31Q](https://www.youtube.com/watch?v=p0Qr4eWq31Q)
+[Watch the full video on YouTube](https://www.youtube.com/watch?v=p0Qr4eWq31Q)
+
 
 
 ## References
 
-Apache HTTP Server Docs
-Docker Compose Docs
-Certbot SSL Setup
-AWS EC2 Documentation
-GoDaddy DNS Help
-GitHub Docs
+- Apache Software Foundation. (2024). *Apache HTTP Server Documentation*. Retrieved from [https://httpd.apache.org/docs](https://httpd.apache.org/docs)
+
+- Docker Inc. (2024). *Docker Compose Overview*. Retrieved from [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
+
+- Electronic Frontier Foundation. (2024). *Certbot User Guide*. Retrieved from [https://eff.org/certbot](https://eff.org/certbot)
+
+- Amazon Web Services. (2024). *Amazon EC2 User Guide for Linux Instances*. Retrieved from [https://docs.aws.amazon.com/ec2](https://docs.aws.amazon.com/ec2)
+
+- GoDaddy. (2024). *Manage DNS Records*. Retrieved from [https://au.godaddy.com/help/manage-dns-records-680](https://au.godaddy.com/help/manage-dns-records-680)
+
+- GitHub Docs. (2024). *GitHub Docs – Repositories, Branches & Markdown*. Retrieved from [https://docs.github.com](https://docs.github.com)
+
 
 ## License & Fair Use Notice
 
