@@ -8,6 +8,12 @@
 
 ---
 
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
+
+---
+
 ## Project Description
 
 A static gaming blog hosted on an AWS EC2 Ubuntu instance (24.04), running inside a Docker container using Apache2. HTTPS is enabled via Certbot, and the site includes three themed pages for RDR2, The Last of Us Part II, and Uncharted 4. This repo documents setup, security, deployment, and version control.
