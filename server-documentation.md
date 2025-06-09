@@ -421,6 +421,18 @@ This video walkthrough demonstrates the entire setup and deployment process of t
 
 ---
 
+---
+title: Extended Documentation
+---
+
+# 📚 Full PDF Documentation (Optional)
+
+This PDF contains complete setup steps, screenshots, command history, configurations, and troubleshooting notes.
+
+📎 [Download the PDF Here](docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignment2_Documentation.pdf)
+
+---
+
 ## 8.0 Licensing
 
 This project, **Ctrl + Shift + Game**, was developed as part of Murdoch University’s ICT171 Assignment 2 and is strictly intended for educational purposes only.
