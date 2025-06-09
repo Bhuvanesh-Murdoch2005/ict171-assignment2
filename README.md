@@ -35,6 +35,22 @@ An interactive static blog website exploring iconic story-driven games like **Re
 
 ---
 
+## 🎥 Video Explainer
+
+This video walkthrough demonstrates the entire setup and deployment process of the cloud server project. It covers:
+
+- EC2 instance and SSH
+- Docker + Apache configuration
+- Website demonstration
+- GoDaddy DNS setup
+- Certbot SSL configuration
+- GitHub version control usage
+- Reflections and learning outcomes
+
+[Watch the Full Video on YouTube](https://www.youtube.com/watch?v=p0Qr4eWq31Q)
+
+---
+
 ## 📚 Documentation
 
 Full setup, deployment steps, and testing details are in:
