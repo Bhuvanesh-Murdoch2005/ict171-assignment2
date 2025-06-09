@@ -59,6 +59,14 @@ Full setup, deployment steps, and testing details are in:
 
 ---
 
+## 📄 Extended PDF Documentation
+
+You can download the full step-by-step documentation with screenshots here:
+
+👉 [Download Full PDF Documentation](docs/34580045_KrishnanVijayaraj_Bhuvanesh_ICT171Assignment2_Documentation.pdf)
+
+---
+
 ## ⚖️ License & Fair Use
 
 All media content belongs to their original creators:
